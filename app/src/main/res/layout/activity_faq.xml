@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="com.dragfoundation.screenart.FAQ">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="italic"
+                    android:text="What are different payment options?"/>
+
+                <ImageButton
+                    android:id="@+id/toggle1"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_arrow_drop" />
+            </LinearLayout>
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ael_expanded="false"
+                app:ael_duration="200"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/itemname1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="You can pay by paytm, Credit/Debit card or by cheque at the time of delivery."
+                    android:layout_marginBottom="8dp"/>
+
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_40"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="italic"
+                    android:text="What if there is some issue in my order?"/>
+
+                <ImageButton
+                    android:id="@+id/toggle2"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_arrow_drop" />
+            </LinearLayout>
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandable2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ael_expanded="false"
+                app:ael_duration="200"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/itemname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="You can contact us within 24 hours. Our support representatives will help you towards your order issue."
+                    android:layout_marginBottom="8dp"/>
+
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_40"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="italic"
+                    android:text="How to reach customer support?"/>
+
+                <ImageButton
+                    android:id="@+id/toggle3"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_arrow_drop" />
+            </LinearLayout>
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandable3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ael_expanded="false"
+                app:ael_duration="200"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/itemname3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="You can reach us by call or email. Details are provided in Support tab"
+                    android:layout_marginBottom="8dp"/>
+
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_40"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="italic"
+                    android:text="What is the duration of order completion?"/>
+
+                <ImageButton
+                    android:id="@+id/toggle4"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_arrow_drop" />
+            </LinearLayout>
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandable4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ael_expanded="false"
+                app:ael_duration="200"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/itemname4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="It depends on order quantity. But we will try our best to complete your order as soon as possible"
+                    android:layout_marginBottom="8dp"/>
+
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_40"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginLeft="16dp"
+                    android:textStyle="italic"
+                    android:text="Am I need to pay tax also?"/>
+
+                <ImageButton
+                    android:id="@+id/toggle5"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="?actionBarSize"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:tint="@color/colorPrimary"
+                    app:srcCompat="@drawable/ic_arrow_drop" />
+            </LinearLayout>
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandable5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:ael_expanded="false"
+                app:ael_duration="200"
+                app:ael_interpolator="linear"
+                app:ael_orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/itemname5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:text="Yes you have to pay 18% GST on total order value."
+                    android:layout_marginBottom="8dp"/>
+
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_40"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

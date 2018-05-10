@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrderPage">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:context=".OrderPage">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:background="@color/grey_20" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/pro"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/product_cat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+
+                            android:text="Product Category"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expandable_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="200"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spinner_product"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="14dp"
+
+                                    android:spinnerMode="dropdown" />
+
+                                <Button
+                                    android:id="@+id/categoryContinue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/rectangle"
+                                    android:backgroundTint="@color/blue_800"
+                                    android:text="CONTINUE"
+                                    android:textColor="@android:color/white" />
+
+
+                            </LinearLayout>
+
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/wei"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/product_weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+
+                            android:text="Paper Weight"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expandable_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="200"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spinner_paper"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="14dp"
+
+                                    android:spinnerMode="dropdown" />
+
+                                <Button
+                                    android:id="@+id/weightContinue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/rectangle"
+                                    android:backgroundTint="@color/blue_800"
+                                    android:text="CONTINUE"
+                                    android:textColor="@android:color/white" />
+
+                            </LinearLayout>
+
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/typ"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/product_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+
+                            android:text="Paper Type"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expandable_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="200"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spinner_paper1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="14dp"
+
+                                    android:spinnerMode="dropdown" />
+
+                                <Button
+                                    android:id="@+id/typeContinue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/rectangle"
+                                    android:backgroundTint="@color/blue_800"
+                                    android:text="CONTINUE"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/qua"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/quant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+
+                            android:text="Quantity"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expandable_quantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="200"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="100dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_weight="2"
+                                    android:paddingLeft="4dp">
+
+                                    <!-- Weight field -->
+                                    <EditText
+                                        android:id="@+id/edit_quantity"
+                                        style="@style/EditorFieldStyle"
+                                        android:layout_alignBaseline="@+id/label_quantity"
+                                        android:layout_alignBottom="@+id/label_quantity"
+                                        android:layout_alignParentStart="true"
+                                        android:hint="Quantity"
+                                        android:inputType="number" />
+
+
+                                    <TextView
+                                        android:id="@+id/label_quantity"
+                                        style="@style/EditorUnitsStyle"
+                                        android:text="units" />
+                                </RelativeLayout>
+
+                                <Button
+                                    android:id="@+id/quantityContinue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/rectangle"
+                                    android:backgroundTint="@color/blue_800"
+                                    android:text="CONTINUE"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/file"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+
+                            android:text="Choose File"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expandable_choose"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="200"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/upload"
+                                    android:layout_width="100dp"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="14dp"
+                                    android:background="@color/pink_A200"
+                                    android:text="Select File"
+                                    android:textColor="@android:color/white" />
+
+                                <Button
+                                    android:id="@+id/fileContinue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/rectangle"
+                                    android:backgroundTint="@color/blue_800"
+                                    android:text="CONTINUE"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/circle"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+                            android:text="Extra Description"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_90" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/expandable_desciption"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ael_duration="200"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/ext"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_height="100dp"
+                                    android:gravity="clip_vertical"
+                                    android:layout_marginBottom="14dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="14dp"
+                                    android:hint="Eg. Size, Lamination type etc"/>
+                                <Button
+                                    android:id="@+id/descContinue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:background="@drawable/rectangle"
+                                    android:backgroundTint="@color/blue_800"
+                                    android:text="CONTINUE FOR ADDRESS"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

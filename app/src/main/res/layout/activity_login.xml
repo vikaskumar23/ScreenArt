@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/white"
+    tools:context="com.dragfoundation.screenart.LoginActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/head" />
+
+
+
+    <ImageView
+        android:id="@+id/printer"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/printer"
+        />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/splash"
+        android:layout_below="@+id/printer" />
+
+    <ImageView
+        android:id="@+id/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/green"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="430dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/login_text"
+            android:layout_width="350dp"
+            android:layout_height="44dp"
+            android:inputType="textPersonName"
+            android:hint="@string/login_label"
+            android:textColorHint="#c1cdd8"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:background="@android:color/white"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp"
+            android:paddingRight="16dp" />
+
+        <Button
+            android:id="@+id/accountkit_button"
+            android:layout_width="350dp"
+            android:layout_height="44dp"
+            android:text="@string/accountkit_button_label"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:textColor="@android:color/white"
+            android:background="@drawable/login_button_selector"
+            android:textSize="16sp"
+            android:layout_marginBottom="15dp" />
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/facebook_login_button"
+            android:layout_width="350dp"
+            android:layout_height="44dp"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:layout_marginBottom="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        />
+
+</RelativeLayout>

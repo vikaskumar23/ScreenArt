@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dragfoundation.screenart.ChatActivity">
+
+    <ListView
+
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:stackFromBottom="true"
+        android:drawSelectorOnTop="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/leftmessage"/>
+
+    <LinearLayout
+        android:layout_margin="5dp"
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+        >
+
+        <EditText
+            android:padding="12dp"
+            android:background="@drawable/rectangle_chat"
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:hint="Write a message..."
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:elevation="8dp"
+            android:layout_margin="5dp"
+            android:id="@+id/sendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:enabled="false"
+            android:background="@drawable/chat"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

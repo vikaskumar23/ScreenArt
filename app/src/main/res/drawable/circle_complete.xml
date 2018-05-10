@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="oval" >
+            <solid android:color="@color/pink_A200" />
+
+            <size
+                android:height="30dp"
+                android:width="30dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_tick" android:height="25dp" android:width="25dp"
+        android:gravity="center">
+
+    </item>
+</layer-list>

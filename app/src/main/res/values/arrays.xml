@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+
+        <string-array name="array_category_options">
+    <item>Select Category</item>
+    <item>Visiting Cards</item>
+    <item>"Letter Heads"</item>
+    <item>"Envelopes"</item>
+    <item>"Books"</item>
+    <item>"Marrige Cards"</item>
+</string-array>
+
+
+    <string-array name="array_paper_type">
+        <item>Select Type</item>
+        <item>Gloss</item>
+        <item>"Matt"</item>
+        <item>"Gumming"</item>
+        <item>"PVC"</item>
+    </string-array>
+
+    <string-array name="array_paper_options">
+        <item>Select Weight</item>
+        <item>100 gsm</item>
+        <item>130 gsm</item>
+        <item>170 gsm</item>
+        <item>250 gsm</item>
+        <item>270 gsm</item>
+        <item>300 gsm</item>
+    </string-array>
+
+
+    </resources>

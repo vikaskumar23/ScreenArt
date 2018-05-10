@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        screenart {
+            keyAlias 'Screen Art'
+            keyPassword 'vikas1996'
+            storeFile file('F:/Key/screenart.jks')
+            storePassword 'vikas1996'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.dragfoundation.screenart"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 4
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:27.0.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+    implementation 'com.facebook.android:account-kit-sdk:4.+'
+    implementation 'com.facebook.android:facebook-login:[4,5)'
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+    implementation 'com.airbnb.android:lottie:2.2.5'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.github.aakira:expandable-layout:1.4.0@aar'
+    def uploadServiceVersion = "3.4.2"
+    implementation "net.gotev:uploadservice:$uploadServiceVersion"
+    testImplementation 'junit:junit:4.12'
+}
+
+
+
+
+
+
+
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

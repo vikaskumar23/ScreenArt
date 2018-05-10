@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="#349fc4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            tools:text="Placed on 12 August, 2017"/>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card1"/>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                tools:text="Quantity : 1000" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                />
+            <TextView
+                android:id="@+id/price"
+                android:layout_margin="10dp"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@android:color/white"
+                tools:text="Price : 50000" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:text="View Details"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:layout_height="48dp" />
+
+
+
+
+    </LinearLayout>
+    
+
+
+</LinearLayout>

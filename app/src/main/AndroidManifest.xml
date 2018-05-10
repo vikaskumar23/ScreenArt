@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dragfoundation.screenart">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Initializer"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_APP_ID" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/AppLoginTheme"
+            tools:replace="android:theme" />
+        <activity android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/ak_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".About"
+            android:parentActivityName=".Navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/about" />
+        <activity
+            android:name=".Navigation"
+            android:label="Screen Art"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".order"
+            android:label="Orders"
+            android:parentActivityName=".Navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeorder">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dragfoundation.screenart.Navigation" />
+
+            <intent-filter>
+                <action android:name="com.drag.screenart.fcmwithappserver_TARGET_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Support"
+            android:label="Support"
+            android:parentActivityName=".Navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeorder" />
+        <activity
+            android:name=".check"
+            android:label="Order Details"
+            android:parentActivityName=".order"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".ChatActivity"
+            android:label="Chat Support"
+            android:parentActivityName=".Navigation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ThankYou"
+            android:label="Thank You"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Privacy_Policy"
+            android:label="Privacy Policy"
+            android:parentActivityName=".About" />
+        <activity
+            android:name=".Terms"
+            android:label="Terms &amp; Conditions"
+            android:parentActivityName=".About" />
+        <activity
+            android:name=".Invoice"
+            android:label="Invoice"
+            android:parentActivityName=".order" />
+        <activity
+            android:name=".FAQ"
+            android:label="Frequently Asked Questions"
+            android:parentActivityName=".Navigation" />
+        <activity
+            android:name=".Offers"
+            android:label="Offers"
+            android:parentActivityName=".Navigation" />
+        <activity
+            android:name=".Address"
+            android:label="Contact Details"
+            android:parentActivityName=".OrderPage" />
+        <activity
+            android:name=".OrderPage"
+            android:label="Create Order"
+            android:parentActivityName=".Navigation" />
+        <activity
+            android:name=".UserProfile"
+            android:label="Profile"
+            android:parentActivityName=".Navigation" />
+        <activity android:name=".ComingSoon"
+            android:label="Coming Soon"
+            android:parentActivityName=".Navigation"></activity>
+    </application>
+
+</manifest>
